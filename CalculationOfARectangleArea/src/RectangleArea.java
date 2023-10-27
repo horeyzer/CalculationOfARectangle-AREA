@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class RectangleArea
 {
-    double length;
-    double width;
+    private double length;
+    private double width;
 
     public void getData()
     {
