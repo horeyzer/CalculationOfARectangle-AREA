@@ -24,7 +24,7 @@ public class RectangleArea
     {
         System.out.println("Rectangle Information: ");
         System.out.println("Length: " + length);
-        System.out.println("Width:" + width);
+        System.out.println("Width: " + width);
         System.out.println("Area: " + computeField());
     }
 }
