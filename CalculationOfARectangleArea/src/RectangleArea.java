@@ -1,30 +1,28 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class RectangleArea
 {
-    private double length;
-    private double width;
+    double a, b, area;
 
-    public void getData()
+    void getData() throws IOException
     {
-        Scanner scan = new Scanner(System.in);
-
-        System.out.print("Enter length of the rectangle in cm: ");
-        length = scan.nextDouble();
-
-        System.out.print("Enter width of the rectangle in cm: ");
-        width = scan.nextDouble();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("With this program you will calculate the area of a rectangle\nEnter the length of the side a:");
+        a = Double.parseDouble(br.readLine());
+        System.out.println("Enter the length of the side b:");
+        b = Double.parseDouble(br.readLine());
     }
+    void computeField() { area = a * b; }
 
-    public double computeField()
+    void fieldDisplay()
     {
-        return length * width;
-    }
-
-    public void fieldDisplay()
-    {
-        System.out.println("Rectangle Information: ");
-        System.out.println("Length: " + length);
-        System.out.println("Width: " + width);
-        System.out.println("Area: " + computeField());
+        System.out.print("The area of the rectangle with the side a = ");
+        System.out.printf("%2.2f",a);
+        System.out.print(" and side b = ");
+        System.out.printf("%2.2f",b);
+        System.out.print(" is = ");
+        System.out.printf("%2.2f.\n", area);
     }
 }

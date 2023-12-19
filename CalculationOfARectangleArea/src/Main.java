@@ -1,9 +1,12 @@
+import java.io.IOException;
+
 public class Main
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
-        RectangleArea rect = new RectangleArea();
-        rect.getData();
-        rect.fieldDisplay();
+        RectangleArea ra = new RectangleArea();
+        ra.getData();
+        ra.computeField();
+        ra.fieldDisplay();
     }
 }
